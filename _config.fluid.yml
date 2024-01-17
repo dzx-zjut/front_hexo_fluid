@@ -236,7 +236,7 @@ custom_js:
   ### 鼠标跟随小星星
   # - //cdn.jsdelivr.net/gh/bynotes/texiao/source/js/xiaoxingxing.js
   ### 小雪花飘落
-  - //cdn.jsdelivr.net/gh/bynotes/texiao/source/js/xiaoxuehua.js
+  # - //cdn.jsdelivr.net/gh/bynotes/texiao/source/js/xiaoxuehua.js
   ### 动态彩带
   # - //cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js
 
@@ -244,7 +244,7 @@ custom_js:
 # The usage is the same as custom_js
 custom_css:
   ### 引入 iconfont 的图标（这是我的iconfont项目链接，最好可以换成你自己的）
-  - //at.alicdn.com/t/c/font_3846514_kabxni94auf.css
+  # - //at.alicdn.com/t/c/font_3846514_kabxni94auf.css
   ### 鼠标指针美化
   - //cdn.jsdelivr.net/gh/bynotes/texiao/source/css/shubiao.css
   ### 滚动条美化
@@ -974,7 +974,7 @@ about:
     - { class: "iconfont icon-github-fill", link: "https://github.com", tip: "GitHub" }
     - { class: "iconfont icon-douban-fill", link: "https://douban.com", tip: "豆瓣" }
     - { class: "iconfont icon-wechat-fill", qrcode: "/img/wechat.png" }
-    - { class: "iconfont icon-qq-fill", qrcode: "/img/qq.png"}
+    # - { class: "iconfont icon-qq-fill", qrcode: "/img/qq.png"}
 
 
 #---------------------------
