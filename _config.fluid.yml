@@ -232,10 +232,24 @@ font:
 # 指定自定义 .js 文件路径，支持列表；路径是相对 source 目录，如 /js/custom.js 对应存放目录 source/js/custom.js
 # Specify the path of your custom js file, support list. The path is relative to the source directory, such as `/js/custom.js` corresponding to the directory `source/js/custom.js`
 custom_js:
+  - //cdn.jsdelivr.net/gh/bynotes/texiao/source/js/love.js
+  ### 鼠标跟随小星星
+  - //cdn.jsdelivr.net/gh/bynotes/texiao/source/js/xiaoxingxing.js
+  ### 小雪花飘落
+  - //cdn.jsdelivr.net/gh/bynotes/texiao/source/js/xiaoxuehua.js
+  ### 动态彩带
+  - //cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js
 
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
 custom_css:
+  ### 引入 iconfont 的图标（这是我的iconfont项目链接，最好可以换成你自己的）
+  - //at.alicdn.com/t/c/font_3846514_kabxni94auf.css
+  ### 鼠标指针美化
+  - //cdn.jsdelivr.net/gh/bynotes/texiao/source/css/shubiao.css
+  ### 滚动条美化
+  - //cdn.jsdelivr.net/gh/bynotes/texiao/source/css/gundongtiao.css
+
 
 # 网页访问统计
 # Analysis of website visitors
@@ -282,7 +296,7 @@ web_analytics:  # 网页访问统计
     app_key: cPBXhTMAjaJLzuhUMJwsKVGf
     # REST API 服务器地址，国际版不填
     # Only the Chinese mainland users need to set
-    server_url:
+    server_url: https://7kzym1ue.lc-cn-n1-shared.com
     # 统计页面时获取路径的属性
     # Get the attribute of the page path during statistics
     path: window.location.pathname
