@@ -239,6 +239,8 @@ custom_js:
   - //cdn.jsdelivr.net/gh/bynotes/texiao/source/js/xiaoxuehua.js
   ### 动态彩带
   - //cdn.jsdelivr.net/gh/bynotes/texiao/source/js/caidai.js
+  - /js/codeBlockFunction.js
+  - /js/codeBLang.js
 
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
