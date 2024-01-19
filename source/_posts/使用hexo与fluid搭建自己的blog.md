@@ -1,11 +1,11 @@
 ---
-title: 使用hexo与fluid优美的写一个自己的blog
+title: 使用hexo与fluid搭建自己的blog
+excerpt: 使用hexo进行创建blog，并使用fluid进行美化
 date: 2024-01-19
 index_img: /img/hexo-head配置blog.jpg
 tags: [blog,网页]
 categories: [网页]
 ---
-
 
 {% note success %}
 
@@ -38,7 +38,7 @@ Hexo是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（�
 可使用
 
 
-```
+```powershell
 npm -v
 ```
 
@@ -51,7 +51,7 @@ npm -v
 可使用 **npm** 进行安装 **hexo**
 
 
-```
+```powershell
 npm install -g hexo-cli
 ```
 
@@ -62,7 +62,7 @@ npm install -g hexo-cli
 在自己喜欢的文件夹中运行
 
 
-```
+```powershell
 hexo init <folder>      # 使用hexo初始化blog根目录，相当于新建文件夹
 cd <folder>             # 进入<folder>文件夹中
 npm install             # 安装npm依赖库
@@ -72,7 +72,7 @@ npm install             # 安装npm依赖库
 完成上述命令后，Hexo就会自动在站点根目录中生成一系列用于生成博客的文件，再输入以下命令，就可以在本地浏览博客：
 
 
-```
+```powershell
 hexo g   # 生成博客，等同于 hexo generate
 hexo s   # 本地预览，等同于 hexo server
 ```
@@ -83,7 +83,7 @@ hexo s   # 本地预览，等同于 hexo server
 此时`folder`中的文件目录为这样
 
 
-```
+```fold
 |-- _config.yml
 |-- node_modules
 |-- package-lock.json
@@ -103,7 +103,7 @@ hexo s   # 本地预览，等同于 hexo server
 
 最直接的方式使用git将本地博客文件夹关联到GitHub的远程仓库，并且把本地文件push到对应的仓库中。hexo提供了一种更为简洁的方式，只需要在`_config.yml`文件中进行配置并在命令行中输入相应命令就可以将本地博客发布到GitHubPages上。 首先，打开`_config.yml`文件，在deployment配置项下设置如下参数：
 
-```
+```yml
 deploy:
     type: git
     repo: git@github.com:你GitHub的用户名/你GitHub的用户名.github.io.git
@@ -112,13 +112,13 @@ deploy:
 
 然后，安装以下插件：
 
-```
+```powershell
 npm install hexo-deployer-git -save
 ```
 
 最后运行
 
-```
+```powershell
 hexo d     #相当于hexo deploy
 ```
 
@@ -134,7 +134,7 @@ hexo d     #相当于hexo deploy
 
 #### 使用**npm**
 在控制台中输入
-```
+```powershell
 npm install --save hexo-theme-fluid
 ```
 #### 直接下载
@@ -142,19 +142,21 @@ npm install --save hexo-theme-fluid
 
 ### 3.2指定主题
 如下修改 Hexo 博客目录中的 `_config.yml`
-```
+```yml
 theme: fluid     # 指定主题
 language: zh-CN  # 指定语言，会影响主题显示的语言，按需修改
 ```
 ### 3.3创建关于页
 首次使用主题的「关于页」需要手动创建：
-```
+
+```powershell
 hexo new page about
 ```
 创建成功后修改 `/source/about/index.md`，添加 `layout` 属性。
 
 修改后的文件示例如下：
-```
+
+```markdown
 ---
 title: 标题
 layout: about
@@ -177,7 +179,7 @@ layout: about 必须存在，并且不能修改成其他值，否则不会显示
 {% endnote %}
 在博客目录下执行命令：
 
-```
+```powershell
 npm update --save hexo-theme-fluid
 ```
 
@@ -199,7 +201,7 @@ npm update --save hexo-theme-fluid
 
 1. 确定自己的 fluid 目录已经开启 git，并且所有改动都已 commit；
 2. 把 fluid 仓库的 develop 分支拉取到自己当前的分支上（也可新建一个分支再拉取）：
-```
+```powershell
 git pull https://github.com/fluid-dev/hexo-theme-fluid.git develop
 ```
 3. 解决代码冲突，保留自己修改的部分（如何解决冲突可自行搜索）。
