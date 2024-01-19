@@ -203,3 +203,5 @@ npm update --save hexo-theme-fluid
 git pull https://github.com/fluid-dev/hexo-theme-fluid.git develop
 ```
 3. 解决代码冲突，保留自己修改的部分（如何解决冲突可自行搜索）。
+
+
