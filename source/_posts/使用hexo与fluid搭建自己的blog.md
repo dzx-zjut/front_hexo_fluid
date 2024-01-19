@@ -3,7 +3,7 @@ title: 使用hexo与fluid优美的写一个自己的blog
 date: 2024-01-19
 index_img: /img/hexo-head配置blog.jpg
 tags: [blog,网页]
-categories: 网页
+categories: [网页]
 ---
 
 
