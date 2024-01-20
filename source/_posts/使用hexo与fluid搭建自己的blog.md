@@ -3,6 +3,7 @@ title: 使用hexo与fluid搭建自己的blog
 excerpt: 使用hexo进行创建blog，并使用fluid进行美化
 date: 2024-01-19
 index_img: /img/hexo-head配置blog.jpg
+banner_img: /img/hexo-head配置blog.jpg
 tags: [blog,网页]
 categories: [网页]
 ---
@@ -83,7 +84,7 @@ hexo s   # 本地预览，等同于 hexo server
 此时`folder`中的文件目录为这样
 
 
-```fold
+```powershell
 |-- _config.yml
 |-- node_modules
 |-- package-lock.json
