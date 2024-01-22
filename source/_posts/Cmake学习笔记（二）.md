@@ -77,7 +77,7 @@ add_executable(demo main.cpp add.cpp sub.cpp mult.cpp div.cpp)
 ```powershell
 mkdir build                   #创建一个build文件夹
 cd build                      #进入build文件夹
- #生成makefile文件
+cmake -G "MinGW Makefiles" .. #生成makefile文件
 ```
 
 {% note info %}
@@ -198,7 +198,7 @@ D:.
 我们可以使用`include_directories()`函数来设置头文件路径，函数的参数就是头文件所在的路径
 
 ```cmake
-include_directories(${CMAKE_SOURCE_DIR}/include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 ```
 
 #### 输出路径
@@ -206,7 +206,7 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 可执行文件的输出路径由宏`EXECUTABLE_OUTPUT_PATH`决定，所以我们可以使用`SET()`函数来设置输出路径
 
 ```cmake
-SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
+SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 ```
 
 ### 6.代码
@@ -221,13 +221,13 @@ project(demo)
 set(CMAKE_CXX_STANDARD 17)
 
 #设置头文件路径
-include_directories(${CMAKE_SOURCE_DIR}/include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 #设置源文件
-aux_source_directory(${CMAKE_SOURCE_DIR}/src SRC_LIST)
+aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/src SRC_LIST)
 
 #设置输出路径
-SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
+SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 
 add_executable(demo ${SRC_LIST})
 ```
