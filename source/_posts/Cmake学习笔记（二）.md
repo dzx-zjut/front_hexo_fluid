@@ -172,7 +172,7 @@ project(demo)
 #设置编译器
 set(CMAKE_CXX_STANDARD 17)
 
-aux_source_directory( #{CMAKE_SOURCE_DIR} SRC_LIST)
+aux_source_directory( ${CMAKE_SOURCE_DIR} SRC_LIST)
 
 add_executable(demo ${SRC_LIST})
 ```

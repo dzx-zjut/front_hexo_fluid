@@ -67,10 +67,10 @@ project(demo)
 set(CMAKE_CXX_STANDARD 17)
 
 #设置源文件
-aux_source_directory(${CMAKE_SOURCE_DIR}/src SRC_LIST)
+aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/src SRC_LIST)
 
 #设置头文件
-include_directories(${CMAKE_SOURCE_DIR}/include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 add_executable(demo ${SRC_LIST} main.cpp)
 ```
